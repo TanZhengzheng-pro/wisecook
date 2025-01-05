@@ -34,6 +34,41 @@
 - レシピ表示部分では、詳細情報を確認するためにクリックできるリンクがあり、外部リンクを開くボタンも提供されています。
 
 
+# Recipe Finder - Vue.js Application
+
+This project is built with Vue.js and utilizes various features like components, data binding, and conditional rendering for dynamic page updates. Below is an overview of key technical details and features.
+
+## Key Features
+
+### 1. **Vue.js Application**
+- **Dynamic Page Updates**: Utilizes Vue components, data binding, and conditional rendering (`v-if`, `v-else-if`) to update the page in real-time.
+- **Data Binding**: Ingredient data is defined in the `data` object (e.g., `ingredients`), and `v-for` is used to dynamically generate ingredient options.
+- **Two-Way Binding**: `v-model` is used to bind user input (ingredients) dynamically.
+- **Axios for Asynchronous Requests**: Axios is used for API requests to fetch recipe data and update the component's data.
+
+### 2. **API Integration**
+- **Spoonacular & MealDB APIs**: External APIs are used to fetch recipes. Spoonacular API is used for ingredient-based search, while MealDB is used for fetching random recipes.
+- **Fetching Recipes**: The `fetchRecipes` function sends a request to fetch recipes based on provided ingredients, updating the `recipes` and `allRecipes` arrays.
+- **Fetching Random Recipes**: The `fetchRandomRecipe` function fetches random recipes from MealDB.
+- **Handling API Responses**: Axios sends GET requests and handles different response data (e.g., recipe details like ingredients, nutrition).
+
+### 3. **Dynamic Data Updates**
+- **Recipe Details**: The `fetchRecipeDetails` function retrieves detailed information (e.g., calories, nutrition) for each recipe and updates the respective fields in the `recipes` array.
+- **Dynamic Rendering**: `v-for` and `v-bind` are used to dynamically display recipe details, such as images, titles, and nutrition information.
+
+### 4. **Responsive Design**
+- **Responsive Layout**: CSS styles ensure the app has a responsive layout, providing a great user experience on different screen sizes.
+- **Flexbox & Grid**: These techniques are used to create layouts that adjust dynamically to screen size.
+- **Mobile Navigation**: The `navbar-toggle` class allows the navigation bar to be toggled on mobile devices, ensuring a clean and functional mobile menu.
+
+### 5. **User Interactions**
+- **Interactive Buttons**: Users can click buttons to navigate between pages (e.g., "Meal Planner" and "Recipe Search").
+- **Dynamic Dropdowns**: The `addDropdown` and `removeDropdown` methods allow users to add or remove ingredient input fields (dropdowns).
+- **Recipe Details**: Users can click on a recipe to view detailed information, with a button to open external recipe links.
+
+## Conclusion
+
+This Vue.js app effectively combines responsive design, real-time updates, and dynamic user interactions to provide a seamless and interactive recipe search and meal planning experience.
 
 
 
